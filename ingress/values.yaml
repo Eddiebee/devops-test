@@ -1,0 +1,15 @@
+ingress:
+  name: ingress-service
+  replicaCount: 1
+  annotations: 
+    class: nginx
+  hosts:
+    - host: chart-example.local
+      paths: 
+        - path: /
+          pathType: Prefix
+          backend:
+            service: 
+              name: serviceName
+              port: 
+                number: 3000

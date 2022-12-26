@@ -1,0 +1,6 @@
+app:
+  name:  app-frontend
+  group: frontend 
+  container:
+   image:  eddiebee/app-frontend
+   port: 80

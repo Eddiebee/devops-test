@@ -1,0 +1,18 @@
+ingress:
+  hosts:
+    - host: app.devopstest.com
+      paths: 
+        - path: /api/
+          pathType: Prefix
+          backend:
+            service: 
+              name: app-backend
+              port: 
+                number: 3000
+        - path: /
+          pathType: Prefix
+          backend:
+            service: 
+              name: app-frontend
+              port:
+               number: 80
